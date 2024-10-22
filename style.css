@@ -1,0 +1,220 @@
+/* General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding-top: 5px;  /* Reducido */
+    padding-bottom: 5px;  /* Reducido */
+    box-shadow: 0 4px 6px -2px rgba(0, 123, 255, 0.3);
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    z-index: 99;
+}
+
+.logo {
+    width: 100px; /* Reducido para hacer el logo más pequeño */
+    height: auto;
+}
+
+.cart {
+    width: 25px; /* Ajustado */
+    height: 25px;
+}
+
+/* Ajustes adicionales para compensar el cambio */
+.header-section p {
+    top: -10px; /* Ajustado para que el contador quede más cerca del carrito */
+    padding: 1px 4px;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+
+
+.container {
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+
+.header-section div {
+    position: relative;
+}
+
+.header-section p {
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background-color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 50%;
+    color: #007bff;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    line-height: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.cart {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.cart-products {
+    position: absolute !important;
+    top: 60px;
+    right: -18px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    display: none;
+    border-radius: 8px;
+    min-width: 300px;
+    max-height: 400px; /* Altura máxima del carrito */
+    overflow-y: auto;  /* Activar scroll vertical */
+    overflow-x: hidden; /* Evitar scroll horizontal */
+}
+
+
+.cart:hover .cart-products {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Product Grid */
+.products {
+    padding-top: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.carts {
+    max-width: 250px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.carts:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carts img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.carts p {
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.carts div p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff5722;
+    color: #ffffff;
+    padding: 5px 10px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+.carts div {
+    position: relative;
+}
+
+.carts a {
+    text-decoration: none;
+    background-color: #007bff;
+    padding: 10px 25px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.carts a:hover {
+    background-color: #0056b3;
+}
+
+/* Cart Dropdown */
+.cart-products .item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.cart-products .item img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.cart-products .item .item-content {
+    margin-left: 15px;
+    flex: 1;
+}
+
+.cart-products .item .item-content h5 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-products .item .item-content h6 {
+    margin: 5px 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+
+.cart-products .item span {
+    background-color: #ff5722;
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-products h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cart-products .item .item-content h5.cart-price {
+    font-weight: bold;
+    color: #007bff;
+}
